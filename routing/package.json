@@ -1,0 +1,27 @@
+{
+  "name": "routing",
+  "version": "1.0.0",
+  "description": "Friend FInder",
+  "main": "apiRoutes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zevubu/FriendFinder.git"
+  },
+  "keywords": [
+    "Friend",
+    "Finder"
+  ],
+  "author": "Zev Hoffman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zevubu/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Zevubu/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
