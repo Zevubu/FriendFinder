@@ -8,5 +8,5 @@ module.exports = function(app){
     // posts all friends
     app.post("/api/browse", function(req,res){
         surveyData.push(req.body);
-    })
-}
+    });
+};
