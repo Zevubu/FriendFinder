@@ -1,0 +1,29 @@
+body{
+    background-color: aquamarine;
+}
+.F-B-SE-C{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#header-img{
+    width:60%;
+    height: auto;
+}
+
+.button{
+    /* width: 75px;
+    height: 45px; */
+    padding: 30px;
+    color: black;
+    background-color: cadetblue;
+}
+
+.button a:hover{
+    
+    padding: 30px;
+    text-align: center;
+    background-color: wheat;
+}
+
