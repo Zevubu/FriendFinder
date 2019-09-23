@@ -10,29 +10,41 @@ module.exports = function(app){
     // posts all friends
     app.post("/api/friends", function(req,res){
         console.log(req.body);
-        surveyData.push(req.body);
-        console.log(surveyData); 
+        console.log(`survey data: ${surveyData}`); 
+        let bestFriend = 0;
+        let minimumDiff = 25;
         let userScore = req.body.scores;
-        let scoreComp = []
         console.log(`user score: ${userScore}`)
+
         for(let i = 0; i< surveyData.length; i++){
             let currentFriend = surveyData[i];
             let friendsScore = currentFriend.scores;
+            console.log(`friend score:${friendsScore}`);
             let totalDifference = 0;
            
-            for(let j = 0; j < friendsScore.length; i++){
-               let difference = Math.abs(userScore[i] - friendsScore[j])
-               console
+            for(let j = 0; j < 5; j++){
+                console.log("comp check")
+                let userNum =  parseInt(userScore[j])
+                console.log(`user num: ${userNum}`)
+                console.log(`friend num: ${friendsScore[j]}`)
+               let difference = Math.abs(userNum - friendsScore[j])
+               totalDifference += difference;
+               console.log(`diference:${difference}`);
             }
-            
+            console.log(`total:${totalDifference}`);
+            if(totalDifference < minimumDiff){
+                bestFriend = i;
+                minimumDiff = totalDifference;
+            }
         }
-       
+        console.log(`You best friend is ${JSON.stringify(surveyData[bestFriend])}`)
+       surveyData.push(req.body);
 
 
     });
 
-    app.post("/api/browse", function(req,res){
-        surveyData.push(req.body);
-    });
+    // app.post("/api/browse", function(req,res){
+    //     surveyData.push(req.body);
+    // });
 
 };
