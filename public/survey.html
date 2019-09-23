@@ -1,144 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <title>Friend Finder</title>
-</head>
-<body>
-    <section id="body-box" class="F-B-SE-C">
-    <header class="F-B-SE-C">
-        <img id="header-img" src="https://i.imgur.com/FePqJtH.jpg" alt="liquid Telivision">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="./css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <title>Survey</title>
+    </head>
+    <body class="F-B-SE-C">
+        <header class="F-B-SE-C">
+            <img id="header-img" src="https://i.imgur.com/FePqJtH.jpg" alt="liquid Telivision">
 
-        
-
-
-    </header>
-    <nav class="F-B-SE-C">
-        <p class="button">Survey</p>
-        <p class="button">Browse</p>
-    </nav>
-    <section id="the-baudy">
-        <form>
-            <p>Find a friend that matches your personality almost...perfectly!?</p>
-            <p>Scale your answers from 1 to 5 based on how much the user agrees or disagrees with then question.</p>
-           <!-- Option 1 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-             <!-- Option 2 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-             <!-- Option 3 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-             <!-- Option 4 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-             <!-- Option 5 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-             <!-- Option 6 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-            <!-- Option 7 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-                <!-- Option 8 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-                <!-- Option 9 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
-                <!-- Option 10 -->
-            <section class="choice-box">
-                <p class="choice-text"></p>
-                <select class="number-choice">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </section>
             
-        </form>
 
-    </section>
-    </section>
-</body>
+
+        </header>
+        <nav class="F-B-SE-C">
+            <a href="/reserve"><button class="button"><span></span>Browse</a>
+            <a href="/"><button class="button"><span></span>Home</button></a>
+            
+        </nav>
+        <section id="the-baudy">
+            <form>
+                <p>Match with your perfect friend!</p>
+                <p> 27% accurate, Guaranteed!</p>
+                <p>Answers these question from 1 (stongly disagree) to 5(strongly agree).</p>
+            <!-- Option 1 -->
+                <label for="name">Name</label>
+                <input type="text" id="name">
+
+                <label for="home-town">Home Town</label>
+                <input type="text" id="home-town">
+
+                <label for="interests">Interests</label>
+                <input type="text" id="intrests">
+                
+
+                <label for="img-url">Image URL</label>
+                <input type="text" id="img-url">
+
+
+                <section id="question-1" class="choice-box">
+                    <p class="choice-text">I don't have a tv now but that's ok. The shows in my mind are almost always better. </p>
+                    <select id="answer-1" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                <!-- Option 2 -->
+                <section id="question-1" class="choice-box">
+                    <p class="choice-text">"Dress Casual" Means: Straps, leather and latex.</p>
+                    <select id="answer-2" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                <!-- Option 3 -->
+                <section id="question-1" class="choice-box">
+                    <p class="choice-text">You have zero counseling training but still feel like your qualified to give strangers advice.</p>
+                    <select id="answer-3" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                <!-- Option 4 -->
+                <section id="question-1" class="choice-box">
+                    <p class="choice-text">I litterly want to marry my last meal.</p>
+                    <select id="answer-4" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                <!-- Option 5 -->
+                <section id="question-1" class="choice-box">
+                    <p class="choice-text">Moderation is NOT abstinence. Moderation necessarily connotes use.</p>
+                    <select id="answer-5" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                <!-- Option 6
+                <section id="question-1" class="choice-box">
+                    <p class="choice-text"></p>
+                    <select id="answer-5" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                 Option 7 -->
+                <!-- <section id="question-1" class="choice-box">
+                    <p class="choice-text"></p>
+                    <select id="answer-6" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section> -->
+                    <!-- Option 8 -->
+                <!-- <section id="question-1" class="choice-box">
+                    <p class="choice-text"></p>
+                    <select id="answer-1" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section> -->
+                    <!-- Option 9 -->
+                <!-- <section id="question-1" class="choice-box">
+                    <p class="choice-text"></p>
+                    <select id="answer-1" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>
+                    Option 10 -->
+                <!-- <section id="question-1" class="choice-box">
+                    <p class="choice-text"></p>
+                    <select id="answer-1" class="number-choice">
+                        <option value="1">1 Stongly Disagree</option>
+                        <option value="2">2 Disagree</option>
+                        <option value="3">3 No real opinion </option>
+                        <option value="4">4 Agree</option>
+                        <option value="5">5 Strongly Agree</option>
+                    </select>
+                </section>  -->
+            </form>
+            <button id="submit">Submit</button>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $("#submit").click(function(){
+                console.log("click")
+
+                let createUser = {
+                    name: $("#name").val(),
+                    homeTown: $("#home-town").val(),
+                    interests:$("#interests").val(),
+                    img: $("#img-url").val(),
+                    scores: [$("#answer-1").val(),$("#answer-2").val(),$("#answer-3").val(),$("#answer-4").val(),$("#answer-5").val()]
+                };
+                console.log(createUser);
+
+                $.ajax({
+                    url: "/api/friends",
+                    method:"POST",
+                    data: createUser
+                })
+                .then(function(data){
+                    console.log(data)
+
+                })
+            })
+            
+            
+        </script>
+    </body>
 </html>
