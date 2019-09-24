@@ -95,6 +95,12 @@
                         <option value="5">5 Strongly Agree</option>
                     </select>
                 </section>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+                        <h1>Hello, I am a modal!</h1>
+                    </div>
+                </div>
                 <!-- Option 6
                 <section id="question-1" class="choice-box">
                     <p class="choice-text"></p>
@@ -155,7 +161,28 @@
         </section>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
         <script type="text/javascript">
+
+            let modal = document.querySelector(".modal");
+            let trigger = document.querySelector("#submit");
+            let closeButton = document.querySelector(".close-button");
+
+            function toggleModal() {
+                modal.classList.toggle("show-modal");
+            }
+
+            function windowOnClick(event) {
+                if (event.target === modal) {
+                    toggleModal();
+                }
+            }
+
+            trigger.addEventListener("click", toggleModal);
+            closeButton.addEventListener("click", toggleModal);
+            window.addEventListener("click", windowOnClick);
             $("#submit").click(function(){
+                	
+    
+
                 console.log("click")
 
                 let createUser = {
@@ -174,6 +201,22 @@
                 })
                 .then(function(data){
                     console.log(data)
+                    let modal = document.querySelector(".modal");
+                    let closeButton = document.querySelector(".close-button");
+
+                    function toggleModal() {
+                        modal.classList.toggle("show-modal");
+                    }
+
+                    function windowOnClick(event) {
+                        if (event.target === modal) {
+                            toggleModal();
+                        }
+                    }
+
+                    trigger.addEventListener("click", toggleModal);
+                    closeButton.addEventListener("click", toggleModal);
+                    window.addEventListener("click", windowOnClick);
 
                 })
             })
