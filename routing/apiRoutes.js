@@ -11,6 +11,7 @@ module.exports = function(app){
     app.post("/api/friends", function(req,res){
         console.log(req.body);
         console.log(`survey data: ${surveyData}`); 
+        let newFriend = req.body;
         let bestFriend = 0;
         let minimumDiff = 25;
         let userScore = req.body.scores;
@@ -23,13 +24,13 @@ module.exports = function(app){
             let totalDifference = 0;
            
             for(let j = 0; j < 5; j++){
-                console.log("comp check")
+                // console.log("comp check")
                 let userNum =  parseInt(userScore[j])
-                console.log(`user num: ${userNum}`)
-                console.log(`friend num: ${friendsScore[j]}`)
+                // console.log(`user num: ${userNum}`)
+                // console.log(`friend num: ${friendsScore[j]}`)
                let difference = Math.abs(userNum - friendsScore[j])
                totalDifference += difference;
-               console.log(`diference:${difference}`);
+            //    console.log(`diference:${difference}`);
             }
             console.log(`total:${totalDifference}`);
             if(totalDifference < minimumDiff){
@@ -39,6 +40,8 @@ module.exports = function(app){
         }
         console.log(`You best friend is ${JSON.stringify(surveyData[bestFriend])}`)
        surveyData.push(req.body);
+
+       res.json(surveyData[bestFriend]);
 
 
     });

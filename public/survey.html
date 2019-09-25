@@ -17,7 +17,7 @@
 
         </header>
         <nav class="F-B-SE-C">
-            <a href="/reserve"><button class="button"><span></span>Browse</a>
+            <!-- <a href="/reserve"><button class="button"><span></span>Browse</a> -->
             <a href="/"><button class="button"><span></span>Home</button></a>
             
         </nav>
@@ -98,7 +98,10 @@
                 <div class="modal">
                     <div class="modal-content">
                         <span class="close-button">&times;</span>
-                        <h1>Hello, I am a modal!</h1>
+                        <h2 id="bf-name"></h2>
+                        <h3 id="bf-hometown"></h3>
+                        <img id="bf-img" src="#" alt="Best Friend">
+                        <h3 id="bf-interests"></h3>
                     </div>
                 </div>
                 <!-- Option 6
@@ -165,6 +168,12 @@
             let modal = document.querySelector(".modal");
             let trigger = document.querySelector("#submit");
             let closeButton = document.querySelector(".close-button");
+            
+            let BFname = $("#bf-name");
+            let BFhomeTown = $("#bf-hometown");
+            let BFimg = $("#bf-img");
+            let BFinterests = $("#bf-interests");
+            
 
             function toggleModal() {
                 modal.classList.toggle("show-modal");
@@ -176,12 +185,9 @@
                 }
             }
 
-            trigger.addEventListener("click", toggleModal);
-            closeButton.addEventListener("click", toggleModal);
-            window.addEventListener("click", windowOnClick);
             $("#submit").click(function(){
                 	
-    
+                
 
                 console.log("click")
 
@@ -200,11 +206,20 @@
                     data: createUser
                 })
                 .then(function(data){
-                    console.log(data)
-                    let modal = document.querySelector(".modal");
-                    let closeButton = document.querySelector(".close-button");
+
+                        BFname.text(`Name ${JSON.stringify(data.name)}`);
+                        BFhomeTown.text(`From, ${JSON.stringify(data.homeTown)}.`);
+                        BFimg.attr("src", data.img);
+                        BFinterests.text(`There intrests are ${JSON.stringify(data.interests)}`);
+                        $("#name").val("");
+                        $("#home-town").val("");
+                        $("#interests").val("");
+                        $("#img-url").val("");
+                       
+
 
                     function toggleModal() {
+                        console.log("togle check")
                         modal.classList.toggle("show-modal");
                     }
 
@@ -214,10 +229,14 @@
                         }
                     }
 
-                    trigger.addEventListener("click", toggleModal);
-                    closeButton.addEventListener("click", toggleModal);
-                    window.addEventListener("click", windowOnClick);
+                        
+                    
 
+                })
+                .then(function(){
+                    closeButton.addEventListener("click", toggleModal);
+                    toggleModal();
+                    
                 })
             })
             
