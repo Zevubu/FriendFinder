@@ -40,5 +40,8 @@ Interests include:
 
 Chester
 
+this way sucker
+https://media3.giphy.com/media/zdhtLwq0TEkoM/source.gif
+
 
 
