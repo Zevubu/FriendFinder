@@ -46,8 +46,10 @@ module.exports = function(app){
 
     });
 
-    // app.post("/api/browse", function(req,res){
-    //     surveyData.push(req.body);
-    // });
+    app.get("/api/browse", function(req,res){
+
+            res.json(surveyData)
+    
+    });
 
 };

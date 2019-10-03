@@ -12,8 +12,6 @@
         <header class="F-B-SE-C">
             <img id="header-img" src="https://media1.giphy.com/media/7R6sQN1q1lNCw/source.gif" alt="liquid Telivision">
 
-            
-
 
         </header>
         <nav class="F-B-R-SE-C">
@@ -23,6 +21,28 @@
         <section id="the-baudy">
 
         </section>
-        </section>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajax({
+                    url:"/api/browse",
+                    method:"GET",
+                })
+                .then(function(data){
+                    
+                    for(let i = 0;i < data.length; i++){
+                        console.log("this is data!"+JSON.stringify(data[i]))
+
+                        $("#the-baudy").append(`<section class="charecter" id="pers${i}"></section>`);
+                        $(`#pers${i}`).append(`<h2 id="bf-name">${data[i].name}</h2>`);
+                        $(`#pers${i}`).append(`<h3 id="bf-name">${data[i].homeTown}</h3>`);
+                        $(`#pers${i}`).append(`<img id="bf-img" src="${data[i].img}" alt="Friend">`);
+                        $(`#pers${i}`).append(`<h3 id="bf-interests">${data[i].interests}</h3>`);
+                    }
+                })
+            })
+        
+        </script>
+
     </body>
 </html>
